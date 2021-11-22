@@ -27,7 +27,7 @@ folder has detailed instructions on how to build the application.
 
 ## Configuration Happens in the Sample App, Not Here
 
-To specify the details of the phone number that the CRP will request, you do need to edit a few configuration variables in the CDK script.  I this example that 
+To specify the details of the phone number that the CRP will request, you do need to edit a few configuration variables in the CDK script.  In the amazon-chime-sdk-pstn-cdk example that 
 script is at amazon-chime-sdk-pstn-cdk/lib/chime_sdk_pstn_cdk-stack.ts.  In that script near the beginning of the file you will find this:
 
 ```typescript
@@ -58,7 +58,7 @@ This Custom Provider is written in typescript and currently only supports the cr
 [Lambda Layer](https://aws.amazon.com/blogs/compute/using-lambda-layers-to-simplify-your-development-process/) to hold all the modules so that our
 lambda is just the provider code.  
 
-Below is an annotated description of how the CRP is used by an application.
+Below is an annotated description of how the CRP is used by an application:
 
 ```typescript
 // create the lambda layer to hold routine libraries for the Custom Provider
@@ -73,7 +73,7 @@ Below is an annotated description of how the CRP is used by an application.
 Be default the providerLayerFolder is 'src/layer/' which will create a layer whose modules are available at '/opt/nodejs' in the lambda execution 
 environment.
 
-We then create an IAM role that has the needed permissions to create Chime SDK telephony resources.
+We then create an IAM role that has the needed permissions to create Chime SDK telephony resources:
 
 ```typescript
     const chimeCreateRole = new iam.Role(this, 'createChimeLambdaRole', {
