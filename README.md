@@ -1,3 +1,7 @@
+# Deprecated!
+
+This approach has been deprecated by a much more elegant and proper approach:  a proper [CDK construct for Amazon Chime SDK resources.](https://github.com/cdklabs/cdk-amazon-chime-resources).  Instead of this template, use a standard CDK repo and just 'yarn add cdk-chime-resources' (or pip install cdk-chime-resources).
+
 # Chime SDK Telephony Custom Resource Provider
 
 This is an [AWS Cloud Development Kit](https://aws.amazon.com/cdk/) (CDK) [Custom Resource Provider](https://docs.aws.amazon.com/cdk/api/latest/docs/custom-resources-readme.html) (CRP)
